@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestion de carritos</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="header">
+    <div class="logo">
+        <h1>Práctica 5 - Pablo de la Cal</h1>
+    </div>
+
+    <nav class="nav">
+        <a href="./index.html">Carritos</a>
+        <a href="./carrito.html">Carrito</a>
+    </nav>
+</header>
+
+<main>
+    <section class="intro">
+        <div class="intro-text">
+            <h2>Bienvenidos a la página de Carrito</h2>
+            <p>
+                Se podrán implementar una serie de endpoints que
+                se irán viendo a continuación.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Datos del carrito consultado</h2>
+
+        <p><strong>Id carrito:</strong> <span id="idCarritoMostrado">---</span></p>
+        <p><strong>Id usuario:</strong> <span id="idUsuarioMostrado">---</span></p>
+        <p><strong>Email usuario:</strong> <span id="emailUsuarioMostrado">---</span></p>
+        <p><strong>Total precio:</strong> <span id="totalPrecioMostrado">---</span> €</p>
+    </section>
+
+    <section>
+        <h2>Actualiza un carrito</h2>
+
+        <form class="login-form" action="#" method="post">
+            <p class="form-text">
+                Introduce tus datos en el formato adecuado para actualizar un carrito.
+            </p>
+
+            <fieldset>
+                <legend>Datos</legend>
+
+                <div class="form-group">
+                    <label for="actualizarIdCarrito">idCarrito</label>
+                    <input type="text" id="actualizarIdCarrito" name="idCarrito" placeholder="Introduce el id de carrito">
+                </div>
+
+                <div class="form-group">
+                    <label for="actualizarIdUsuario">idUsuario</label>
+                    <input type="text" id="actualizarIdUsuario" name="idUsuario" placeholder="Introduce el id de usuario">
+                </div>
+
+                <div class="form-group">
+                    <label for="actualizarEmailUsuario">Email usuario</label>
+                    <input type="email" id="actualizarEmailUsuario" name="emailUsuario" placeholder="Introduce el email del usuario">
+                </div>
+            </fieldset>
+
+            <div class="form-buttons">
+                <button id="botonActualizarCarrito" type="submit">Actualiza el carrito</button>
+            </div>
+        </form>
+    </section>
+
+    <section>
+        <h2>Mostrar las líneas del carrito</h2>
+
+        <p class="form-text">
+            Pulse el botón para cargar las líneas del carrito.
+        </p>
+
+        <button id="botonCargarLineas" type="button">Carga líneas</button>
+
+        <table id="tablaLineasCarrito">
+            <thead>
+            <tr>
+                <th>Id línea</th>
+                <th>Id artículo</th>
+                <th>Precio unitario</th>
+                <th>Número de unidades</th>
+                <th>Coste línea</th>
+            </tr>
+            </thead>
+
+            <tbody id="cuerpoTablaLineas">
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Añadir línea de carrito</h2>
+
+        <form class="login-form" action="#" method="post">
+            <p class="form-text">
+                Introduce tus datos en el formato adecuado para añadir
+                una línea a un carrito.
+            </p>
+
+            <fieldset>
+                <legend>Datos</legend>
+
+                <div class="form-group">
+                    <label for="addIdCarrito">idCarrito</label>
+                    <input type="text" id="addIdCarrito" name="idCarrito" placeholder="Introduce el id de carrito">
+                </div>
+
+                <div class="form-group">
+                    <label for="addIdArticulo">idArticulo</label>
+                    <input type="text" id="addIdArticulo" name="idArticulo" placeholder="Introduce el id de artículo">
+                </div>
+
+                <div class="form-group">
+                    <label for="addPrecioUnitario">Precio unitario</label>
+                    <input type="text" id="addPrecioUnitario" name="precioUnitario" placeholder="Introduce el precio unitario">
+                </div>
+
+                <div class="form-group">
+                    <label for="addNumeroUnidades">Número de unidades</label>
+                    <input type="text" id="addNumeroUnidades" name="numeroUnidades" placeholder="Introduce el número de unidades">
+                </div>
+            </fieldset>
+
+            <div class="form-buttons">
+                <button id="botonAddLinea" type="submit">Añade la línea de carrito</button>
+            </div>
+        </form>
+    </section>
+
+    <section>
+        <h2>Actualiza línea de carrito</h2>
+
+        <form class="login-form" action="#" method="post">
+            <p class="form-text">
+                Introduce tus datos en el formato adecuado para actualizar
+                una línea.
+            </p>
+
+            <fieldset>
+                <legend>Datos</legend>
+
+                <div class="form-group">
+                    <label for="actualizarLineaIdCarrito">idCarrito</label>
+                    <input type="text" id="actualizarLineaIdCarrito" name="idCarrito" placeholder="Introduce el id de carrito">
+                </div>
+
+                <div class="form-group">
+                    <label for="actualizarIdLinea">idLinea</label>
+                    <input type="text" id="actualizarIdLinea" name="idLinea" placeholder="Introduce el id de línea">
+                </div>
+
+                <div class="form-group">
+                    <label for="actualizarIdArticulo">idArticulo</label>
+                    <input type="text" id="actualizarIdArticulo" name="idArticulo" placeholder="Introduce el id de artículo">
+                </div>
+
+                <div class="form-group">
+                    <label for="actualizarPrecioUnitario">Precio unitario</label>
+                    <input type="text" id="actualizarPrecioUnitario" name="precioUnitario" placeholder="Introduce el precio unitario">
+                </div>
+
+                <div class="form-group">
+                    <label for="actualizarNumeroUnidades">Número de unidades</label>
+                    <input type="text" id="actualizarNumeroUnidades" name="numeroUnidades" placeholder="Introduce el número de unidades">
+                </div>
+            </fieldset>
+
+            <div class="form-buttons">
+                <button id="botonActualizarLinea" type="submit">Actualiza la línea de carrito</button>
+            </div>
+        </form>
+    </section>
+
+    <section>
+        <h2>Borrar línea de carrito</h2>
+
+        <form class="login-form" action="#" method="post">
+            <p class="form-text">
+                Introduce el carrito y la línea que quieres borrar.
+            </p>
+
+            <fieldset>
+                <legend>Datos</legend>
+
+                <div class="form-group">
+                    <label for="borrarLineaIdCarrito">idCarrito</label>
+                    <input type="text" id="borrarLineaIdCarrito" name="idCarrito" placeholder="Introduce el id de carrito">
+                </div>
+
+                <div class="form-group">
+                    <label for="borrarIdLinea">idLinea</label>
+                    <input type="text" id="borrarIdLinea" name="idLinea" placeholder="Introduce el id de línea">
+                </div>
+            </fieldset>
+
+            <div class="form-buttons">
+                <button id="botonBorrarLinea" type="submit">Borrar línea de carrito</button>
+            </div>
+        </form>
+    </section>
+
+    <section>
+        <h2>Borrar carrito</h2>
+
+        <form class="login-form" action="#" method="post">
+            <p class="form-text">
+                Introduce el id del carrito que quieres borrar.
+            </p>
+
+            <fieldset>
+                <legend>Datos</legend>
+
+                <div class="form-group">
+                    <label for="borrarIdCarrito">idCarrito</label>
+                    <input type="text" id="borrarIdCarrito" name="idCarrito" placeholder="Introduce el id de carrito">
+                </div>
+            </fieldset>
+
+            <div class="form-buttons">
+                <button id="botonBorrarCarrito" type="submit">Borrar carrito</button>
+            </div>
+        </form>
+    </section>
+</main>
+
+<script src="./js/carrito.js"></script>
+</body>
+</html>
