@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestion de carritos</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<header class="header">
+    <div class="logo">
+        <h1>Práctica 5 - Pablo de la Cal</h1>
+    </div>
+
+    <nav class="nav">
+        <a href="./index.html">Carritos</a>
+        <a href="./carrito.html">Carrito</a>
+    </nav>
+</header>
+
+<main>
+    <section class="intro">
+        <div class="intro-text">
+            <h2>Bienvenidos a la página de gestión de carritos</h2>
+            <p>
+                Se podrán implementar una serie de endpoints que
+                se irán viendo a continuación.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Creación de un carrito</h2>
+
+        <form class="login-form" action="#" method="post">
+            <p class="form-text">
+                Introduce tus datos en el formato adecuado para crear un carrito.
+            </p>
+
+            <fieldset>
+                <legend>Datos</legend>
+
+                <div class="form-group">
+                    <label for="crearIdUsuario">idUsuario</label>
+                    <input type="text" id="crearIdUsuario" name="idUsuario" placeholder="Introduce el id de usuario">
+                </div>
+
+                <div class="form-group">
+                    <label for="crearEmailUsuario">Email usuario</label>
+                    <input type="email" id="crearEmailUsuario" name="emailUsuario" placeholder="Introduce el email del usuario">
+                </div>
+            </fieldset>
+
+            <div class="form-buttons">
+                <button id="botonCrearCarrito" type="submit">Crea el carrito</button>
+            </div>
+        </form>
+    </section>
+
+    <section>
+        <h2>Buscar un carrito por su id</h2>
+
+        <form class="login-form" action="#" method="get">
+            <p class="form-text">
+                Introduce tus datos en el formato adecuado para buscar un carrito.
+            </p>
+
+            <fieldset>
+                <legend>Datos</legend>
+
+                <div class="form-group">
+                    <label for="buscarIdCarrito">idCarrito</label>
+                    <input type="text" id="buscarIdCarrito" name="idCarrito" placeholder="Introduce el id de carrito">
+                </div>
+            </fieldset>
+
+            <div class="form-buttons">
+                <button id="botonBuscarCarrito" type="submit">Busca el carrito</button>
+            </div>
+        </form>
+    </section>
+
+    <section>
+        <h2>Buscar un carrito por su id de usuario</h2>
+
+        <form class="login-form" action="#" method="get">
+            <p class="form-text">
+                Introduce tus datos en el formato adecuado para buscar un carrito.
+            </p>
+
+            <fieldset>
+                <legend>Datos</legend>
+
+                <div class="form-group">
+                    <label for="buscarIdUsuario">idUsuario</label>
+                    <input type="text" id="buscarIdUsuario" name="idUsuario" placeholder="Introduce el id de usuario">
+                </div>
+            </fieldset>
+
+            <div class="form-buttons">
+                <button id="botonBuscarCarritoUsuario" type="submit">Busca el carrito</button>
+            </div>
+        </form>
+    </section>
+
+    <section>
+        <h2>Listar carritos</h2>
+
+        <p class="form-text">
+            Pulse el botón para cargar los carritos.
+        </p>
+
+        <button id="botonCargarCarritos" type="button">Carga carritos</button>
+
+        <table id="tablaCarritos">
+            <thead>
+            <tr>
+                <th>Id carrito</th>
+                <th>Id usuario</th>
+                <th>Email usuario</th>
+                <th>Total precio</th>
+                <th>Acciones</th>
+            </tr>
+            </thead>
+
+            <tbody id="cuerpoTablaCarritos">
+            </tbody>
+        </table>
+    </section>
+</main>
+
+<script src="./js/index.js"></script>
+</body>
+</html>
